@@ -10,3 +10,14 @@ var xserverRemovalIntervalJobId = setInterval(() => {
     catch (e) {
     }
 }, 100);
+
+var monitoringHeaderRemovalIntervalJobId = setInterval(() => {
+    try {
+        var target = ".xbox_monitoring .xbox__header";
+        var testContainer = document.querySelector(target);
+        testContainer.style.display = "none";
+        clearInterval(monitoringHeaderRemovalIntervalJobId);
+    }
+    catch (e) {
+    }
+}, 100);
